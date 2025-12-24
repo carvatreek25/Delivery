@@ -9,7 +9,7 @@ O objetivo é apoiar decisões estratégicas relacionadas à performance dos ent
 
 📂 2. Estrutura do Repositório
 
-data/ → Dataset utilizado nas análises
+arquivos/ → Dataset utilizado nas análises
 notebooks/ → Notebooks com etapas de exploração, modelagem e cálculos
 src/ → Scripts de limpeza, transformação e cálculos
 results/ → Tabelas finais e agregações solicitadas pelas áreas
