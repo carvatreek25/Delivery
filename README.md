@@ -1,80 +1,36 @@
-# Delivery
-Auxiliando os Times de Marketing e Pricing da Empresa de Delivery
+# 🛵 Delivery Analytics: Inteligência Operacional e Financeira
 
-Projeto: Análises Operacionais e Financeiras para Empresa de Delivery
+Este projeto apresenta uma série de análises estratégicas desenvolvidas para os times de **Marketing, Pricing e Controladoria (CFO)** de uma empresa de delivery. O foco principal é a transformação de dados brutos em indicadores de performance (KPIs) e suporte à decisão financeira.
 
-📌 1. Visão Geral do ProjetoEste projeto reúne um conjunto de análises solicitadas por diferentes áreas da empresa de delivery — Marketing, Pricing e Diretoria Financeira (CFO).
+## 🏗️ Arquitetura de Dados e Relacionamento
+<p align="center">
+  <img src="imagens/relacionamento_tabelas.png" alt="Modelo de Dados e Relacionamentos" width="800">
+</p>
 
-O objetivo é apoiar decisões estratégicas relacionadas à performance dos entregadores, definição de preços, receita e distribuição de bônus corporativo.As análises foram conduzidas utilizando o dataset disponibilizado pela empresa, contendo informações operacionais das entregas, características dos entregadores, trajetos percorridos e valores financeiros associados às corridas.
+## 🎯 Objetivos Estratégicos
 
-📂 2. Estrutura do Repositório
+O projeto foi estruturado para atender três frentes de negócio:
 
-arquivos/ → Dataset utilizado nas análises
-notebooks/ → Notebooks com etapas de exploração, modelagem e cálculos
-src/ → Scripts de limpeza, transformação e cálculos
-results/ → Tabelas finais e agregações solicitadas pelas áreas
-README.md → Documento atual com detalhamento metodológico
+### 1. Marketing & Growth
+* Identificação dos **Top 20 entregadores** com maior tração (distância total).
+* Mapeamento de perfis profissionais e modais de locomoção predominantes.
 
-🧭 3. Objetivos do ProjetoAs análises se dividem em três frentes principais:3.1 MarketingIdentificação dos 20 entregadores com maior distância total percorrida, incluindo:
+### 2. Estratégia de Pricing
+* Análise da distribuição de distância média por estado (focada em motocicletas).
+* Subsídio de dados para ajustes regionais de taxas e remuneração.
 
-Tipo de profissional
-Modalidade de locomoção (ex.: moto, bicicleta, carro etc.)
+### 3. CFO & Diretoria Executiva
+* **Análise de Receita:** Segmentação por categoria (Food x Goods) e localização geográfica.
+* **Cálculo de Profitability:** Implementação de lógica de custo fixo e margem de 15% sobre o GMV.
+* **Participação nos Lucros:** Cálculo automatizado de bônus individual para o quadro de 2.000 colaboradores.
 
-3.2 Pricing
+## 📁 Estrutura do Repositório
 
-Produção da distribuição da distância média percorrida por motoqueiros, segmentada por estado, a fim de subsidiar ajustes nos valores pagos aos entregadores em cada região.3.3 CFO e Diretoria ExecutivaGeração de indicadores de receita:
-Receita média e receita total por tipo de entrega (Food x Goods)
-Receita média e receita total por estado
-
-Total: 4 tabelas consolidadas.Além disso, cálculo do bônus individual a ser distribuído aos 2 mil funcionários, considerando:
-Custo fixo de R$ 5,00 por entrega
-Receita de 15% sobre o valor de cada entrega
-Distribuição de 20% do lucro entre os funcionários
-
-🔍 4. Metodologia
-A metodologia foi estruturada em etapas sequenciais, garantindo rastreabilidade e reprodutibilidade.
-
-4.1 Preparação dos Dados
-
-Verificação de integridade, tipos, valores faltantes e duplicidades.
-Padronização de colunas (datas, unidades de medida, estados, tipos de entrega).
-Criação de variáveis auxiliares:
-Distância total por entregador
-Distância média por entregador
-Identificação de modal de locomoção
-Marcação de tipo de entrega (Food x Goods)
-
-
-4.2 Análise para Marketing
-
-Agregação por entregador:
-Soma total da distância percorrida
-Classificação por tipo de profissional
-Modal de locomoção
-Ordenação decrescente por distância total
-Seleção dos 20 primeiros entregadores
-
-4.3 Análise para Pricing
-
-Filtragem exclusiva de entregadores com modal motocicleta
-Cálculo da distância média por entrega
-Agrupamento por estado
-
-Construção da distribuição utilizando estatísticas:
-Média
-Mediana
-Desvio padrão
-Quartis
-
-
-4.4 Indicadores para o CFOReceita
-
-Para cada entrega, a receita é calculada como:receita_entrega = valor_entrega × 0.15
-CustoCusto fixo por entrega:custo_entrega = 5.00
-Lucro total do períodolucro = receita_total - custo_total
-Montante destinado ao bônusbônus_total = lucro × 0.20
-Bônus individual (2.000 funcionários)bônus_individual = bônus_total / 2000
-Agregações produzidas
-Receita média e total por tipo (Food x Goods)
-Receita média e total por estado
-As quatro tabelas geradas foram salvas na pasta results/.
+```text
+DELIVERY_PROJECT/
+├── arquivos/    # Dataset original (CSV/Raw)
+├── notebooks/   # EDA e prototipagem das análises
+├── src/         # Scripts Python para limpeza e cálculos (ETL)
+├── results/     # Tabelas finais e dashboards agregados
+├── modelo_dados.png
+└── README.md
