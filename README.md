@@ -30,7 +30,4 @@ DELIVERY_PROJECT/
 ├── data/        # Datasets operacionais (arquivos CSV)
 ├── imagens/     # Diagramas de relacionamento e capturas da análise
 ├── notebooks/   # Desenvolvimento de EDA e modelos de cálculo
-├── src/         # Scripts Python para limpeza e transformação (ETL)
-├── results/     # Tabelas finais e agregações de saída
-└── README.md
 ```
