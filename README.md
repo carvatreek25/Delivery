@@ -28,9 +28,9 @@ O projeto foi estruturado para atender três frentes de negócio:
 
 ```text
 DELIVERY_PROJECT/
-├── arquivos/    # Dataset original (CSV/Raw)
+├── data/    # Dataset original (CSV/Raw)
 ├── notebooks/   # EDA e prototipagem das análises
 ├── src/         # Scripts Python para limpeza e cálculos (ETL)
 ├── results/     # Tabelas finais e dashboards agregados
-├── modelo_dados.png
+├── imagens/     # Imagem do relacionamento das tabelas
 └── README.md
